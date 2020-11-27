@@ -1,0 +1,19 @@
+[alias]
+  c = "commit -am'update'"
+  s = status
+  l = log --pretty=fuller --graph --date=short --decorate=full
+  pl = pull
+  ps = push
+  br = branch
+  co = checkout
+[core]
+  editor = vim
+  quotepath = false  # git 日本語ファイル名をエスケープせずに表示
+  excludesfile = ~/.gitignore
+[status] # git status 追跡されていないファイルはすべて表示
+	showUntrackedFiles = all
+
+[user]
+  name = "近藤大地"
+  email = kondo.daichi@donuts.ne.jp
+
