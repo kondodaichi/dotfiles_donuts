@@ -94,6 +94,8 @@ nnoremap <Space>w :w<CR>
 nnoremap <Space>q :bd<CR>
 " 候補が複数ある場合は一覧表示
 nnoremap <C-]> g<C-]>
+" full path をyank
+nnoremap cp :let @+ = expand("%:p")<cr>
 " === buffer系 ===
 " buffer移動
 nnoremap <silent> <C-h> :bprev<CR>
