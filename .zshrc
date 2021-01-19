@@ -1,5 +1,10 @@
 plugins=(git)
 
+# cdなしでディレクトリ名を直接指定して移動し、移動後自動でlsする
+# https://qiita.com/puriketu99/items/e3c85fbe0fc4b939d0e2
+setopt auto_cd
+function chpwd() { ls }
+
 # rbenv用
 eval "$(rbenv init -)"
 
@@ -24,11 +29,6 @@ else
   alias diff='diff -u'
 fi
 
-cdls () {
-  \cd "$@" && ls -AFGv
-}
-alias cd="cdls"
-
 # ls color
 export LSCOLORS=exfxcxdxbxbxHxHxHxGxGx
 
@@ -43,7 +43,6 @@ PROMPT='%{$fg[red]%}[%n@%m]%{$reset_color%}'
 PROMPT=$PROMPT'${vcs_info_msg_0_} %{${fg[red]}%}%}$%{${reset_color}%} '
 
 PROMPT=$'\n%{$fg[blue]%}%~%{$reset_color%} ${vcs_info_msg_0_}\n%{$fg[red]%}> %{$reset_color%}'
-#RPROMPT='%{${fg[green]}%}[%t]%{${reset_color}%}'
 
 # 大文字小文字に関わらず, 候補が見つからない時のみ文字種を無視した補完をする
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
@@ -67,9 +66,6 @@ prompt pure
 # npm https://qiita.com/PolarBear/items/62c0416492810b7ecf7c
 export PATH=$PATH:$HOME/.nodebrew/current/bin
 
-alias python="python3"
-export PATH="$HOME/Library/Python/3.7/bin:$PATH"
-
 # brewで入れた方をmac内蔵より優先度高く探す
 export PATH=/usr/local/bin:$PATH
 
@@ -91,5 +87,4 @@ function docker-containers(){
 alias de="docker exec -it \$(docker-containers | fzf-tmux)"
 alias da="docker attach \$(docker-containers | fzf-tmux)"
 alias dk="docker kill \$(docker-containers | fzf-tmux)"
-
 
