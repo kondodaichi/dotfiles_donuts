@@ -69,7 +69,6 @@ export PATH=$PATH:$HOME/.nodebrew/current/bin
 # brewで入れた方をmac内蔵より優先度高く探す
 export PATH=/usr/local/bin:$PATH
 
-alias mvim='/Applications/MacVim.app/Contents/bin/mvim'
 alias mvimr="mvim --remote-silent"
 alias nvimr=nvr
 
@@ -88,3 +87,5 @@ alias de="docker exec -it \$(docker-containers | fzf-tmux)"
 alias da="docker attach \$(docker-containers | fzf-tmux)"
 alias dk="docker kill \$(docker-containers | fzf-tmux)"
 
+# python
+eval "$(pyenv init -)"
