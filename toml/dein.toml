@@ -209,16 +209,17 @@ repo = 'kshenoy/vim-signature'
 hook_add = '''
   let g:SignatureMap = { 'Leader' : "m", 'PlaceNextMark' : "", 'ToggleMarkAtLine' : "M", 'PurgeMarksAtLine' : "", 'DeleteMark' : "", 'PurgeMarks' : "", 'PurgeMarkers' : "", 'GotoNextLineAlpha' : "", 'GotoPrevLineAlpha' : "", 'GotoNextSpotAlpha' : "", 'GotoPrevSpotAlpha' : "", 'GotoNextLineByPos' : "", 'GotoPrevLineByPos' : "", 'GotoNextSpotByPos' : "", 'GotoPrevSpotByPos' : "", 'GotoNextMarker' : "", 'GotoPrevMarker' : "", 'GotoNextMarkerAny' : "", 'GotoPrevMarkerAny' : "", 'ListBufferMarks' : "", 'ListBufferMarkers' : "" }
   let g:SignatureIncludeMarks = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-  function! SignatureListToggle()
-    let match_list = filter(split(execute('ls'), '\v\n'), 'match(v:val, "Location") != -1')
-    if len(match_list) == 0 " no match
-      SignatureListGlobalMarks
-    else
-      let buf_num = match(match_list[0], '\d')
-      execute(buf_num . 'bd')
-    endif
-  endfunction
-  nnoremap <F3> <esc>:call SignatureListToggle()<CR>
+  " function! SignatureListToggle()
+  "   let match_list = filter(split(execute('ls'), '\v\n'), 'match(v:val, "Location") != -1')
+  "   if len(match_list) == 0 " no match
+  "     SignatureListGlobalMarks
+  "   else
+  "     let buf_num = match(match_list[0], '\d')
+  "     execute(buf_num . 'bd')
+  "   endif
+  " endfunction
+  " nnoremap <F3> <esc>:call SignatureListToggle()<CR>
+  nnoremap <F3> <esc>:SignatureListGlobalMarks<CR>
 '''
 
 [[plugins]] # vim-markに必要

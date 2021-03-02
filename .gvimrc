@@ -12,7 +12,7 @@ endfunc
 noremap <D-u> :<C-u>call Trance()<CR>
 
 set blur=0
-set guifont=Monaco:h18
+set guifont=Monaco:h15
 
 "右スクロールバーなし
 set guioptions-=r
@@ -39,5 +39,5 @@ function! FontSizeMinus ()
 endfunction
 nmap <D--> :call FontSizeMinus()<CR>
 nmap <D-+> :call FontSizePlus()<CR>
-nmap <D-0> :set guifont=SFMono-Regular:h16<CR>
+nmap <D-0> :set guifont=Monaco:h15<CR>
 

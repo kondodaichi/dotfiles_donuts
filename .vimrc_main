@@ -102,9 +102,6 @@ nnoremap <silent> <C-h> :bprev<CR>
 nnoremap <silent> <C-l> :bnext<CR>
 " 保存してなくてもバッファ切り替えOK
 set hidden
-" === window系 ===
-nnoremap sh :<C-u>sp<CR>
-nnoremap sv :<C-u>vs<CR>
 " === visual系 ===
 " visualでラストの改行はデフォルトでは含めないようにする
 vnoremap $ $h
