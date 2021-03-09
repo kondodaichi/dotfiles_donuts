@@ -22,6 +22,7 @@ hook_add = '''
 # - echo has("python3") が 1 であること
 #   - 多分vimのビルド時に決まる
 #   - brewでインストールしたら大丈夫そう? アプリをそのままもってくるとだめそう
+#     - brew --cask でインストールすべし (better touch toolで使えるようにするため)
 # - pyx print(sys.version) で出る python の pip3 に pynvim が入っていること
 #   - 無ければpip install pynvim をする
 # - neovim以外の場合は 'roxma/nvim-yarp' と 'roxma/vim-hug-neovim-rpc' が必要
@@ -42,6 +43,13 @@ hook_add = '''
   nmap <F3> <esc>:Denite mark<CR>
   nmap <F4> <esc>:Denite outline<CR>
   nmap <F5> <esc>:Denite jump<CR>
+'''
+
+# neovim以外の場合は 'roxma/nvim-yarp' と 'roxma/vim-hug-neovim-rpc' が必要
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+  let g:deoplete#enable_at_startup = 1
 '''
 
 [[plugins]]
