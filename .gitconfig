@@ -17,3 +17,5 @@
   name = "近藤大地"
   email = kondo.daichi@donuts.ne.jp
 
+[pull]
+	rebase = false
