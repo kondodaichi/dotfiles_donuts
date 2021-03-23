@@ -29,7 +29,8 @@ set guioptions-=l
 set guioptions-=L
 "下スクロールバーなし
 set guioptions-=b
-
+" タブの番号とフルパスを表示
+set guitablabel=%N\ %f
 
 " font size cahnge https://vi.stackexchange.com/questions/3093/how-can-i-change-the-font-size-in-gvim
 function! FontSizePlus ()
