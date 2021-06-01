@@ -1,7 +1,9 @@
 [alias]
   c = "commit -am'update'"
   s = status
-  l = log --pretty=fuller --graph --date=short --decorate=full
+  ss = status --short
+  sss = "!f() { git status --short | awk '{ print $2 }' | tr '\n' ' '; }; f"
+  l = log --pretty=fuller --graph --date=short --decorate=full --stat
   pl = pull
   ps = push
   br = branch
@@ -19,3 +21,5 @@
 
 [pull]
 	rebase = false
+[diff]
+	tool = nvimdiff
