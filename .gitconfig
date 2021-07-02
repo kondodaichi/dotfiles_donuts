@@ -19,6 +19,8 @@
   name = "近藤大地"
   email = kondo.daichi@donuts.ne.jp
 
+[init]
+  defaultBranch = main
 [pull]
 	rebase = false
 [diff]
