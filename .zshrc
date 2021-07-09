@@ -71,6 +71,7 @@ export PATH=$PATH:$HOME/.nodebrew/current/bin
 # brewで入れた方をmac内蔵より優先度高く探す
 export PATH=/usr/local/bin:$PATH
 
+alias mvim="open /Applications/MacVim.app" # なんかこわれたから応急処置
 alias mvimr="mvim --remote-silent"
 alias nvimr=nvr
 
