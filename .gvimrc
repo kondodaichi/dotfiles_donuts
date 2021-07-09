@@ -20,6 +20,7 @@ noremap <D-u> :<C-u>call Trance()<CR>
 
 set blur=0
 set guifont=Monaco:h16
+set background=dark
 
 "右スクロールバーなし
 set guioptions-=r

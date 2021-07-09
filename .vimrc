@@ -154,6 +154,12 @@ nnoremap <C-]> g<C-]>
 " full path をyank
 nnoremap cp :let @+ = expand("%")<CR>
 nnoremap cpp :let @+ = expand("%:p")<CR>
+if has("nvim")
+  " tmux時のnvim用
+  nnoremap O <C-o>
+endif
+nnoremap t :tabnew<CR>
+
 
 " === buffer系 ===
 " 保存してなくてもバッファ切り替えOK
@@ -166,10 +172,6 @@ nnoremap <silent> <C-l> :tabnext<CR>
 nnoremap <lt> :-tabm<CR>
 nnoremap >    :+tabm<CR>
 nnoremap yt :tab split<CR>
-if has("gui_running")
-  " tmux時のnvim用
-  nnoremap O <C-o>
-endif
 
 nmap <D-1> <esc>1gt<CR>
 nmap <D-2> <esc>2gt<CR>
@@ -198,6 +200,8 @@ vnoremap <silent> y y`]
 vnoremap <silent> p p`]
 
 " === comand系 ===
+cabbrev t tabnew
+cabbrev g Ggrep
 cnoremap <C-e> <End>
 cnoremap <C-a> <Home>
 cnoremap <C-h> <Left>
