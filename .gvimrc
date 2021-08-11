@@ -1,17 +1,10 @@
 let g:trance_level = 0
-let g:trance_level_up = 33
 set transparency=0
 func! Trance()
   if g:trance_level == 0
-    set transparency=33
+    set transparency=20
     let g:trance_level = 1
-  elseif g:trance_level == 1
-    set transparency=66
-    let g:trance_level = 2
-  elseif g:trance_level == 2
-    set transparency=100
-    let g:trance_level = 3
-  elseif g:trance_level == 3
+  else
     set transparency=0
     let g:trance_level = 0
   endif

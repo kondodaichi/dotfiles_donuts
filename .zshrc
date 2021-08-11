@@ -23,7 +23,7 @@ alias ber='bundle exec ruby'
 alias be='bundle exec'
 alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 alias d=docker
-alias dc=docker-compose
+alias dc='docker-compose'
 
 if [[ -x `which colordiff` ]]; then
   alias diff='colordiff -u'
