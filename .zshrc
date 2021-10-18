@@ -90,3 +90,15 @@ alias dk="docker kill \$(docker-containers | fzf-tmux)"
 
 # python
 eval "$(pyenv init -)"
+
+# vim like keybind
+bindkey -v
+bindkey -M viins '^A' beginning-of-line
+bindkey -M viins '^E' end-of-line
+bindkey -M viins 'jj' vi-cmd-mode
+bindkey -M viins '^N' down-line-or-history
+bindkey -M viins '^P' up-line-or-history
+bindkey -M viins '^R' history-incremental-pattern-search-backward
+bindkey -M viins '^?' backward-delete-char
+bindkey -M viins '^[[3~' vi-delete-char
+
