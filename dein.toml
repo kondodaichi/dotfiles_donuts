@@ -222,6 +222,9 @@ hook_add = '''
 [[plugins]] # gitコマンドをvimから使う
 repo = 'tpope/vim-fugitive'
 
+[[plugins]] # vim-fugitiveのgithubサポート用
+repo = 'tpope/vim-rhubarb'
+
 [[plugins]] # gitのdiffを左端に表示
 repo = 'airblade/vim-gitgutter'
 hook_add = '''
