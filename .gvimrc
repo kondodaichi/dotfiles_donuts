@@ -26,6 +26,15 @@ set guioptions-=b
 " タブの番号とフルパスを表示
 set guitablabel=%N\ %f
 
+autocmd BufEnter *
+\ if getcwd() =~ 'server' |
+\   highlight Normal guibg=#000010 |
+\ elseif getcwd() =~ 'front' |
+\   highlight Normal guibg=#001000 |
+\ elseif getcwd() =~ 'jbc' |
+\   highlight Normal guibg=#100000 |
+\ endif
+
 " font size cahnge https://vi.stackexchange.com/questions/3093/how-can-i-change-the-font-size-in-gvim
 function! FontSizePlus ()
   let l:gf_size_whole = matchstr(&guifont, '\(:h\)\@<=\d\+$')
