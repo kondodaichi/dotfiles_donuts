@@ -205,6 +205,8 @@ vnoremap <silent> p p`]
 cabbrev t tabnew
 cabbrev g Ggrep
 cabbrev b GBrowse
+cabbrev l Git log -p %
+
 cnoremap <C-e> <End>
 cnoremap <C-a> <Home>
 cnoremap <C-h> <Left>
