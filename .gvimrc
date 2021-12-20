@@ -30,9 +30,9 @@ autocmd BufEnter *
 \ if getcwd() =~ 'server' |
 \   highlight Normal guibg=#000010 |
 \ elseif getcwd() =~ 'front' |
-\   highlight Normal guibg=#000800 |
+\   highlight Normal guibg=#001000 |
 \ elseif getcwd() =~ 'jbc' |
-\   highlight Normal guibg=#080000 |
+\   highlight Normal guibg=#100000 |
 \ endif
 
 " font size cahnge https://vi.stackexchange.com/questions/3093/how-can-i-change-the-font-size-in-gvim
