@@ -25,6 +25,8 @@ alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 alias d=docker
 alias dc='docker-compose'
 
+# docker-compose run roumu-server bash -c '/bin/bash --rcfile <(echo -e '$(cat ~/.bashrc | base64)' | base64 -d)'
+
 if [[ -x `which colordiff` ]]; then
   alias diff='colordiff -u'
 else
@@ -72,6 +74,8 @@ export PATH=$PATH:$HOME/.nodebrew/current/bin
 export PATH=/usr/local/bin:$PATH
 
 alias nvimr=nvr
+
+export PATH="$HOME/bin:$PATH"
 
 # goのコマンドのインストール先
 export GOPATH="$HOME/go"
