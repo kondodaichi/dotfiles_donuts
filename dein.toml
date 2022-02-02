@@ -222,6 +222,11 @@ hook_add = '''
 
 [[plugins]] # gitコマンドをvimから使う
 repo = 'tpope/vim-fugitive'
+hook_add = '''
+  cabbrev g Ggrep
+  cabbrev b GBrowse
+  cabbrev l Git log --follow -p %
+'''
 
 [[plugins]] # vim-fugitiveのgithubサポート用
 repo = 'tpope/vim-rhubarb'
@@ -257,6 +262,7 @@ repo = 'tpope/vim-rails'
 repo = 'joker1007/vim-ruby-heredoc-syntax'
 
 ## javascript
+
 [[plugins]]
 repo = 'maxmellon/vim-jsx-pretty'
 hook_add = '''
@@ -268,6 +274,11 @@ hook_add = '''
 
 [[plugins]]
 repo = 'rhysd/vim-crystal'
+
+## slim
+
+[[plugins]]
+repo = 'slim-template/vim-slim'
 
 ## markdown
 

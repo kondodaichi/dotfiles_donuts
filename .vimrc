@@ -203,11 +203,7 @@ vnoremap <silent> p p`]
 
 " === comand系 ===
 cabbrev t tabnew
-cabbrev g Ggrep
-cabbrev b GBrowse
-cabbrev l Git log -p %
 
-noremap <space>W <esc>:set wrap!<CR>
 cnoremap <C-e> <End>
 cnoremap <C-a> <Home>
 cnoremap <C-h> <Left>
