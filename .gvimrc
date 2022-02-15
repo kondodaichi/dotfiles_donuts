@@ -27,12 +27,14 @@ set guioptions-=b
 set guitablabel=%N\ %f
 
 autocmd BufEnter *
-\ if getcwd() =~ 'server' |
-\   highlight Normal guibg=#000010 |
-\ elseif getcwd() =~ 'front' |
-\   highlight Normal guibg=#001000 |
-\ elseif getcwd() =~ 'jbc' |
+\ if getcwd() =~ 'jbc' |
 \   highlight Normal guibg=#100000 |
+\ elseif getcwd() =~ 'payrollservice' |
+\   highlight Normal guibg=#151500 |
+\ elseif getcwd() =~ 'roumu-server' |
+\   highlight Normal guibg=#000010 |
+\ elseif getcwd() =~ 'roumu-front' |
+\   highlight Normal guibg=#001000 |
 \ endif
 
 " font size cahnge https://vi.stackexchange.com/questions/3093/how-can-i-change-the-font-size-in-gvim
