@@ -23,7 +23,9 @@ alias ber='bundle exec ruby'
 alias be='bundle exec'
 alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 alias d=docker
-alias dcr='(){ docker-compose run $1 bash -c "/bin/bash --rcfile <(echo \"alias r=ruby; alias be=\\\"bundle exec\\\"; alias l=\\\"ls -al\\\"; alias ll=\\\"ls -al\\\"; \")" }'
+alias dc='docker compose'
+alias dcr='(){  docker-compose run --rm $1 $2   -c "/bin/bash --rcfile <(echo \"alias r=ruby; alias be=\\\"bundle exec\\\"; alias l=\\\"ls -al\\\"; alias ll=\\\"ls -al\\\"; \")" }'
+alias dcrb='(){ docker-compose run --rm $1 bash -c "/bin/bash --rcfile <(echo \"alias r=ruby; alias be=\\\"bundle exec\\\"; alias l=\\\"ls -al\\\"; alias ll=\\\"ls -al\\\"; \")" }'
 
 if [[ -x `which colordiff` ]]; then
   alias diff='colordiff -u'
